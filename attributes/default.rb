@@ -20,7 +20,7 @@ default["cloudbuilder"]["recipies"]["role"]["db"] = ["mysql::server", "keystone:
 # need to setup Cloud:OpenStack:Grizzly repository on SLE for rabbitmq
 default["cloudbuilder"]["recipies"]["role"]["mq"] = ["openstack-common", "rabbitmq"]
 default["cloudbuilder"]["recipies"]["role"]["keystone"] = ["keystone::server"]
-default["cloudbuilder"]["recipies"]["role"]["glance"] = ["glance::api", "glance::registry"]
+default["cloudbuilder"]["recipies"]["role"]["glance"] = ["glance::registry", "glance::api"]
 default["cloudbuilder"]["recipies"]["role"]["nova-api"] = ["openstack-common", "nova::nova-setup", "nova::api-os-compute"]
 default["cloudbuilder"]["recipies"]["role"]["conductor"] = ["openstack-common", "nova::conductor"]
 default["cloudbuilder"]["recipies"]["role"]["scheduler"] = ["openstack-common", "nova::scheduler"]
