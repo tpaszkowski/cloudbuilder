@@ -14,6 +14,7 @@ default["cloudbuilder"]["roles"]["compute_role"] = "compute"
 
 #default["cloudbuilder"]["hosts"][default_hostname]["roles"] = ["db", "mq", "keystone", "glance", "nova-api", "scheduler", "conductor", "compute"]
 default["cloudbuilder"]["hosts"][default_hostname]["roles"] = ["db", "mq", "keystone","glance", "nova-api", "conductor", "scheduler", "compute"]
+default["cloudbuilder"]["hosts"]["linux-f0kx"]["roles"] = ["db", "mq", "keystone","glance", "nova-api", "conductor", "scheduler", "compute"]
 
 
 default["cloudbuilder"]["recipies"]["role"]["db"] = ["mysql::server", "keystone::db", "glance::db", "nova::db"]
@@ -24,4 +25,4 @@ default["cloudbuilder"]["recipies"]["role"]["glance"] = ["glance::registry", "gl
 default["cloudbuilder"]["recipies"]["role"]["nova-api"] = ["openstack-common", "nova::nova-setup", "nova::api-os-compute"]
 default["cloudbuilder"]["recipies"]["role"]["conductor"] = ["openstack-common", "nova::conductor"]
 default["cloudbuilder"]["recipies"]["role"]["scheduler"] = ["openstack-common", "nova::scheduler"]
-default["cloudbuilder"]["recipies"]["role"]["compute"] = ["openstack-common", "nova::libvirt"]
+default["cloudbuilder"]["recipies"]["role"]["compute"] = ["openstack-common", "nova::libvirt", "nova::compute"]
